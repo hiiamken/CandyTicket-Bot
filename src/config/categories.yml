@@ -1,0 +1,378 @@
+# ========================================
+# CANDYTICKET BOT - TICKET CATEGORIES
+# ========================================
+# This file contains all ticket categories and their questions
+# You can add, remove, or modify categories as needed
+# Each category will appear as an option in the ticket panel
+
+# ========================================
+# SUPPORT TICKET CATEGORY
+# ========================================
+# For general support and help requests
+support:
+  # Display name shown in embeds and thread titles
+  name: "Support"
+  
+  # Label shown in the select menu
+  label: "Support"
+  
+  # Description shown in the panel
+  description: "Need help from our team?"
+  
+  # Emoji icon for the category (use Unicode emojis)
+  emoji: "🎫"
+  
+  # Array of questions that users need to answer
+  # You can add, remove, or modify questions as needed
+  questions:
+    # Question 1: Issue Type (Select Menu)
+    - id: "issue_type"                    # Unique identifier for this question
+      label: "Issue Type"                 # Label shown above the input field
+      placeholder: "Please select your issue type"  # Placeholder text inside the input
+      style: 3                            # Input style: 1=Short text, 2=Long text, 3=Select menu
+      required: true                      # Whether this field is required
+      options:                            # Options for select menu (only needed if style=3)
+        - label: "Technical"              # Display name for the option
+          value: "technical"              # Value stored when selected
+          emoji: "🔧"                     # Emoji for the option
+        - label: "Account"
+          value: "account"
+          emoji: "👤"
+        - label: "Payment"
+          value: "payment"
+          emoji: "💳"
+        - label: "Other"
+          value: "other"
+          emoji: "❓"
+    
+    # Question 2: Detailed Description (Long Text)
+    - id: "description"
+      label: "Detailed Description"
+      placeholder: "Please describe your issue in detail..."
+      style: 2                            # Long text area
+      required: true
+      maxLength: 1000                     # Maximum characters allowed
+    
+    # Question 3: Priority Level (Select Menu)
+    - id: "priority"
+      label: "Priority Level"
+      placeholder: "Select priority level"
+      style: 3                            # Select menu
+      required: true
+      options:
+        - label: "Low"
+          value: "low"
+          emoji: "🟢"
+        - label: "Medium"
+          value: "medium"
+          emoji: "🟡"
+        - label: "High"
+          value: "high"
+          emoji: "🔴"
+        - label: "Urgent"
+          value: "urgent"
+          emoji: "🚨"
+
+# ========================================
+# REPORT TICKET CATEGORY
+# ========================================
+# For reporting users or violations
+report:
+  name: "Report"
+  label: "Report"
+  description: "Report users or violations"
+  emoji: "🚨"
+  questions:
+    # Question 1: Report Type (Select Menu)
+    - id: "report_type"
+      label: "Report Type"
+      placeholder: "Select report type"
+      style: 3
+      required: true
+      options:
+        - label: "Spam"
+          value: "spam"
+          emoji: "📢"
+        - label: "Harassment"
+          value: "harassment"
+          emoji: "😡"
+        - label: "Inappropriate Content"
+          value: "inappropriate"
+          emoji: "⚠️"
+        - label: "Cheating"
+          value: "cheating"
+          emoji: "🎲"
+        - label: "Other"
+          value: "other"
+          emoji: "❓"
+    
+    # Question 2: Reported User (Short Text)
+    - id: "target_user"
+      label: "Reported User"
+      placeholder: "Tag user or enter user ID"
+      style: 1                            # Short text
+      required: true
+      maxLength: 100
+    
+    # Question 3: Evidence (Long Text)
+    - id: "evidence"
+      label: "Evidence"
+      placeholder: "Describe in detail and provide evidence..."
+      style: 2                            # Long text area
+      required: true
+      maxLength: 1000
+
+# ========================================
+# SUGGESTION TICKET CATEGORY
+# ========================================
+# For suggesting new features or improvements
+suggestion:
+  name: "Suggestion"
+  label: "Suggestion"
+  description: "Suggest new features or improvements"
+  emoji: "💡"
+  questions:
+    # Question 1: Suggestion Type (Select Menu)
+    - id: "suggestion_type"
+      label: "Suggestion Type"
+      placeholder: "Select suggestion type"
+      style: 3
+      required: true
+      options:
+        - label: "New Feature"
+          value: "feature"
+          emoji: "✨"
+        - label: "Improvement"
+          value: "improvement"
+          emoji: "🔧"
+        - label: "Bug Fix"
+          value: "bugfix"
+          emoji: "🐛"
+        - label: "Other"
+          value: "other"
+          emoji: "💭"
+    
+    # Question 2: Suggestion Title (Short Text)
+    - id: "suggestion_title"
+      label: "Suggestion Title"
+      placeholder: "Brief title for your suggestion"
+      style: 1                            # Short text
+      required: true
+      maxLength: 100
+    
+    # Question 3: Suggestion Details (Long Text)
+    - id: "suggestion_details"
+      label: "Suggestion Details"
+      placeholder: "Describe your suggestion in detail..."
+      style: 2                            # Long text area
+      required: true
+      maxLength: 1000
+
+# ========================================
+# PARTNERSHIP TICKET CATEGORY (EXAMPLE)
+# ========================================
+# Example category for partnership applications
+# You can copy this structure to create new categories
+partnership:
+  name: "Partnership"
+  label: "Partnership"
+  description: "Apply for partnership or collaboration"
+  emoji: "🤝"
+  questions:
+    # Question 1: Partnership Type (Select Menu)
+    - id: "partnership_type"
+      label: "Partnership Type"
+      placeholder: "Select partnership type"
+      style: 3
+      required: true
+      options:
+        - label: "Server Partnership"
+          value: "server"
+          emoji: "🏠"
+        - label: "Content Creator"
+          value: "creator"
+          emoji: "📹"
+        - label: "Event Collaboration"
+          value: "event"
+          emoji: "🎉"
+        - label: "Other"
+          value: "other"
+          emoji: "💼"
+    
+    # Question 2: Organization Name (Short Text)
+    - id: "organization_name"
+      label: "Organization Name"
+      placeholder: "Your server/organization name"
+      style: 1
+      required: true
+      maxLength: 100
+    
+    # Question 3: Member Count (Short Text)
+    - id: "member_count"
+      label: "Member Count"
+      placeholder: "Number of members in your community"
+      style: 1
+      required: true
+      maxLength: 10
+    
+    # Question 4: Partnership Proposal (Long Text)
+    - id: "proposal"
+      label: "Partnership Proposal"
+      placeholder: "Describe your partnership proposal..."
+      style: 2
+      required: true
+      maxLength: 1000
+
+# ========================================
+# BUG REPORT TICKET CATEGORY (EXAMPLE)
+# ========================================
+# Example category for bug reports
+bug_report:
+  name: "Bug Report"
+  label: "Bug Report"
+  description: "Report bugs or technical issues"
+  emoji: "🐛"
+  questions:
+    # Question 1: Bug Type (Select Menu)
+    - id: "bug_type"
+      label: "Bug Type"
+      placeholder: "Select bug type"
+      style: 3
+      required: true
+      options:
+        - label: "Bot Issue"
+          value: "bot"
+          emoji: "🤖"
+        - label: "Website Issue"
+          value: "website"
+          emoji: "🌐"
+        - label: "Game Issue"
+          value: "game"
+          emoji: "🎮"
+        - label: "Other"
+          value: "other"
+          emoji: "🔧"
+    
+    # Question 2: Bug Title (Short Text)
+    - id: "bug_title"
+      label: "Bug Title"
+      placeholder: "Brief description of the bug"
+      style: 1
+      required: true
+      maxLength: 100
+    
+    # Question 3: Steps to Reproduce (Long Text)
+    - id: "steps_to_reproduce"
+      label: "Steps to Reproduce"
+      placeholder: "Describe how to reproduce this bug..."
+      style: 2
+      required: true
+      maxLength: 1000
+    
+    # Question 4: Expected Behavior (Long Text)
+    - id: "expected_behavior"
+      label: "Expected Behavior"
+      placeholder: "What should happen normally?"
+      style: 2
+      required: true
+      maxLength: 500
+    
+    # Question 5: Actual Behavior (Long Text)
+    - id: "actual_behavior"
+      label: "Actual Behavior"
+      placeholder: "What actually happens?"
+      style: 2
+      required: true
+      maxLength: 500
+
+# ========================================
+# STAFF APPLICATION CATEGORY (EXAMPLE)
+# ========================================
+# Example category for staff applications
+# Uncomment and modify this section to enable staff applications
+# staff_application:
+#   name: "Staff Application"
+#   label: "Staff Application"
+#   description: "Apply to join our staff team"
+#   emoji: "👨‍💼"
+#   questions:
+#     - id: "position"
+#       label: "Position"
+#       placeholder: "Select position"
+#       style: 3
+#       required: true
+#       options:
+#         - label: "Moderator"
+#           value: "mod"
+#           emoji: "🛡️"
+#         - label: "Helper"
+#           value: "helper"
+#           emoji: "🤝"
+#         - label: "Event Manager"
+#           value: "event"
+#           emoji: "🎉"
+#     
+#     - id: "age"
+#       label: "Age"
+#       placeholder: "Enter your age"
+#       style: 1
+#       required: true
+#       maxLength: 3
+#     
+#     - id: "experience"
+#       label: "Previous Experience"
+#       placeholder: "Describe your previous experience..."
+#       style: 2
+#       required: true
+#       maxLength: 1000
+#     
+#     - id: "motivation"
+#       label: "Why do you want to join?"
+#       placeholder: "Explain your motivation..."
+#       style: 2
+#       required: true
+#       maxLength: 1000
+
+# ========================================
+# FEEDBACK CATEGORY (EXAMPLE)
+# ========================================
+# Example category for general feedback
+# Uncomment and modify this section to enable feedback tickets
+# feedback:
+#   name: "Feedback"
+#   label: "Feedback"
+#   description: "Share your feedback with us"
+#   emoji: "💬"
+#   questions:
+#     - id: "feedback_type"
+#       label: "Feedback Type"
+#       placeholder: "Select feedback type"
+#       style: 3
+#       required: true
+#       options:
+#         - label: "General"
+#           value: "general"
+#           emoji: "💭"
+#         - label: "Bug Report"
+#           value: "bug"
+#           emoji: "🐛"
+#         - label: "Feature Request"
+#           value: "feature"
+#           emoji: "✨"
+#         - label: "Complaint"
+#           value: "complaint"
+#           emoji: "😞"
+#     
+#     - id: "rating"
+#       label: "Overall Rating"
+#       placeholder: "Rate your experience (1-10)"
+#       style: 1
+#       required: true
+#       maxLength: 2
+#     
+#     - id: "feedback_text"
+#       label: "Your Feedback"
+#       placeholder: "Share your detailed feedback..."
+#       style: 2
+#       required: true
+#       maxLength: 1000 

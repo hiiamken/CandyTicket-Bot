@@ -1,0 +1,162 @@
+# ========================================
+# CANDYTICKET BOT - MAIN CONFIGURATION
+# ========================================
+# This file contains the main configuration for the CandyTicket Bot
+# Edit the values below to match your Discord server settings
+
+# Discord Server ID where the bot will operate
+# To get this: Right-click your server → Copy Server ID
+guild_id: "1234567890123456789"
+
+# Array of role IDs that can manage tickets (staff roles)
+# Replace with actual role IDs from your server
+# To get role ID: Right-click role → Copy Role ID
+staff_roles:
+  - "1234567890123456789"  # Admin role
+  - "1234567890123456790"  # Moderator role
+  - "1234567890123456791"  # Helper role
+
+# Category ID where ticket threads will be created
+# Replace with actual category ID from your server
+# To get category ID: Right-click category → Copy Category ID
+ticket_category: "1234567890123456789"
+
+# ========================================
+# DATABASE CONFIGURATION
+# ========================================
+# Choose your preferred database system
+# Options: sqlite, mongodb, postgresql, mysql
+database:
+  # Database type to use
+  type: "sqlite"
+  
+  # SQLite configuration (default)
+  sqlite:
+    # Database file path (relative to project root)
+    file: "data/tickets.db"
+    
+    # Enable verbose logging
+    verbose: false
+    
+    # WAL mode for better performance
+    wal_mode: true
+  
+  # MongoDB configuration
+  mongodb:
+    # Connection string
+    uri: "mongodb://localhost:27017/candyticket"
+    
+    # Database name
+    database: "candyticket"
+    
+    # Connection options
+    options:
+      useNewUrlParser: true
+      useUnifiedTopology: true
+  
+  # PostgreSQL configuration
+  postgresql:
+    # Connection details
+    host: "localhost"
+    port: 5432
+    database: "candyticket"
+    username: "postgres"
+    password: "password"
+    
+    # Connection pool settings
+    pool:
+      min: 2
+      max: 10
+      idleTimeoutMillis: 30000
+  
+  # MySQL configuration
+  mysql:
+    # Connection details
+    host: "localhost"
+    port: 3306
+    database: "candyticket"
+    username: "root"
+    password: "password"
+    
+    # Connection pool settings
+    pool:
+      min: 2
+      max: 10
+      acquireTimeoutMillis: 30000
+
+# ========================================
+# EMBED COLORS CONFIGURATION
+# ========================================
+# Colors used in embeds (hex format without #)
+embed_colors:
+  primary: "FF69B4"    # Pink - Main color for tickets
+  success: "00FF00"    # Green - Success messages
+  warning: "FFA500"    # Orange - Warning messages
+  error: "FF0000"      # Red - Error messages
+  info: "0099FF"       # Blue - Information messages
+
+# ========================================
+# BRANDING CONFIGURATION
+# ========================================
+# Customize your bot's branding and appearance
+branding:
+  # Server/Community name (used in embeds and messages)
+  server_name: "Candy Community"
+  
+  # Server/Community description
+  server_description: "Welcome to Candy Community support system!"
+  
+  # Footer text for all embeds (supports placeholders)
+  footer_text: "Candy Community • Automated Support System"
+  
+  # Alternative footer text (for different contexts)
+  footer_alt: "Candy Community • Support System"
+  
+  # Brand color (hex code)
+  brand_color: "FF69B4"
+  
+  # Brand emoji
+  brand_emoji: "🎫"
+  
+  # Custom branding examples:
+  # footer_text: "Your Server Name • Support System"
+  # footer_text: "{server_name} • Powered by hiiamken"
+  # footer_text: "Your Brand • Your Tagline"
+
+# ========================================
+# COOLDOWN CONFIGURATION
+# ========================================
+# Settings to prevent spam and abuse
+cooldown:
+  # Time in milliseconds between ticket creations (5 minutes = 300000ms)
+  ticket_creation: 300000
+  
+  # Maximum number of open tickets per user
+  max_tickets_per_user: 3
+
+# ========================================
+# AUTO-CLOSE CONFIGURATION
+# ========================================
+# Automatic ticket management settings
+auto_close:
+  # Enable/disable automatic ticket closing
+  enabled: true
+  
+  # Hours of inactivity before auto-closing (72 hours = 3 days)
+  inactive_hours: 72
+  
+  # Hours before auto-close to send warning (48 hours = 2 days)
+  warning_hours: 48
+
+# ========================================
+# BOT SETTINGS
+# ========================================
+bot:
+  # Bot's activity status
+  activity: "🎫 Candy Community Support"
+  
+  # Activity type: PLAYING, WATCHING, LISTENING, COMPETING
+  activity_type: "WATCHING"
+  
+  # Log level: debug, info, warn, error
+  log_level: "info" 

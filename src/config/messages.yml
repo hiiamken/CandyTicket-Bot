@@ -1,0 +1,265 @@
+# ========================================
+# CANDYTICKET BOT - MESSAGES CONFIGURATION
+# ========================================
+# This file contains all text messages used by the bot
+# You can customize these messages to match your server's style
+
+# ========================================
+# PANEL MESSAGES
+# ========================================
+# Messages shown in the ticket panel
+panel:
+  # Main panel title (supports {brand_emoji} and {server_name} placeholders)
+  title: "{brand_emoji} {server_name} Ticket System"
+  
+  # Panel description (supports {server_description} placeholder)
+  description: "{server_description}\n\nPlease select the ticket type that fits your needs:"
+  
+  # Footer text (supports {footer_text} placeholder)
+  footer: "{footer_text}"
+  
+  # Select menu placeholder
+  select_placeholder: "Select ticket type..."
+
+# ========================================
+# TICKET MESSAGES
+# ========================================
+# Messages shown when creating and managing tickets
+ticket:
+  # Success message when ticket is created
+  created_success: "✅ Ticket created successfully! Please check the thread: {thread}"
+  
+  # Message when ticket is claimed
+  claimed: "👋 Ticket Claimed"
+  claimed_description: "This ticket has been claimed by {user}"
+  
+  # Message when ticket is closed
+  closed: "🔒 Ticket Closed"
+  closed_description: "This ticket has been closed by {user}"
+  
+  # Staff notification message
+  staff_notification: "{roles} - New ticket needs attention!"
+  
+  # Ticket embed information
+  embed:
+    # Title format for ticket embed
+    title: "{emoji} Ticket {category}"
+    
+    # Description for ticket embed
+    description: "Ticket created by {user}"
+    
+    # Footer text for ticket embed (supports {footer_alt} placeholder)
+    footer: "{footer_alt}"
+    
+    # Field labels
+    fields:
+      created_by: "👤 Created by"
+      time: "📅 Time"
+      type: "🎫 Type"
+  
+  # Thread creation
+  thread:
+    # Thread name format
+    name: "{emoji} {category} - {username}"
+    
+    # Thread creation reason
+    reason: "Ticket {category} from {tag}"
+    
+    # Auto archive duration (in minutes)
+    auto_archive_duration: 60
+
+# ========================================
+# ERROR MESSAGES
+# ========================================
+# Error messages shown to users
+errors:
+  # Permission errors
+  no_permission: "❌ You do not have permission to use this command!"
+  
+  # Cooldown errors
+  cooldown: "⏰ You need to wait {time} more minutes to create a new ticket!"
+  
+  # Too many tickets
+  too_many_tickets: "❌ You already have {max} open tickets. Please close old tickets before creating new ones!"
+  
+  # Thread only commands
+  thread_only: "❌ This command can only be used in a thread!"
+  
+  # General errors
+  general: "❌ An error occurred while processing your request!"
+  command_error: "❌ An error occurred while executing this command!"
+  
+  # Specific error messages
+  panel_creation_error: "❌ An error occurred while creating the panel!"
+  statistics_error: "❌ An error occurred while viewing statistics!"
+  close_tickets_error: "❌ An error occurred while closing tickets!"
+  
+  # Modal errors
+  modal_error: "❌ An error occurred while processing your form!"
+
+# ========================================
+# SUCCESS MESSAGES
+# ========================================
+# Success messages shown to users
+success:
+  # Panel creation
+  panel_created: "✅ Ticket panel created successfully!"
+  
+  # No tickets to close
+  no_tickets_open: "✅ No tickets are currently open!"
+
+# ========================================
+# STATISTICS MESSAGES
+# ========================================
+# Messages for statistics command
+statistics:
+  title: "📊 Ticket Statistics"
+  description: "Current ticket statistics for **{server}**"
+  total: "📈 Total"
+
+# ========================================
+# CLOSE ALL MESSAGES
+# ========================================
+# Messages for close all tickets command
+close_all:
+  title: "🔒 Close All Tickets"
+  description: "Ticket closing results:"
+  closed: "✅ Closed"
+  errors: "❌ Errors"
+  total: "📊 Total"
+
+# ========================================
+# TRANSCRIPT MESSAGES
+# ========================================
+# Messages for transcript feature
+transcript:
+  under_development: "📄 Transcript export feature is under development!"
+
+# ========================================
+# BUTTON LABELS
+# ========================================
+# Labels for buttons in ticket threads
+buttons:
+  close: "Close ticket"
+  claim: "Claim ticket"
+  transcript: "Export transcript"
+
+# ========================================
+# MODAL MESSAGES
+# ========================================
+# Messages for ticket creation modals
+modal:
+  # Title format for ticket modal
+  title: "{emoji} {category} - Ticket Information"
+  
+  # Default placeholders for different input types
+  placeholders:
+    short_text: "Enter your answer here..."
+    long_text: "Please provide detailed information..."
+    select_menu: "Select an option..."
+
+# ========================================
+# MODAL PLACEHOLDERS
+# ========================================
+# Default placeholders for modal inputs
+# These can be overridden in categories.yml
+default_placeholders:
+  short_text: "Enter your answer here..."
+  long_text: "Please provide detailed information..."
+  select_menu: "Select an option..."
+
+# ========================================
+# LOG MESSAGES
+# ========================================
+# Messages logged to console
+logs:
+  bot_starting: "🚀 Starting CandyTicket Bot..."
+  commands_loaded: "✅ Loaded all commands"
+  events_loaded: "✅ Loaded all events"
+  bot_ready: "🎫 CandyTicket Bot is ready!"
+
+# ========================================
+# CUSTOMIZATION EXAMPLES & GUIDES
+# ========================================
+# Below are examples of how to customize messages
+# Uncomment and modify the examples below to use them
+
+# Example 1: Change language to Spanish
+# panel:
+#   title: "🎫 Sistema de Tickets"
+#   description: "¡Bienvenido al sistema de soporte de Candy Community!"
+
+# Example 2: Change emojis
+# ticket:
+#   claimed: "🎯 Ticket Reclamado"
+#   closed: "🔐 Ticket Cerrado"
+
+# Example 3: Add custom branding
+# panel:
+#   footer: "Your Server Name • Support System"
+
+# Example 4: Change button labels
+# buttons:
+#   close: "Cerrar ticket"
+#   claim: "Reclamar ticket"
+#   transcript: "Exportar transcripción"
+
+# Example 5: Custom error messages
+# errors:
+#   no_permission: "🚫 No tienes permisos para usar este comando!"
+#   cooldown: "⏰ Necesitas esperar {time} minutos más para crear un nuevo ticket!"
+
+# Example 6: Custom branding with placeholders
+# panel:
+#   title: "🎫 {server_name} Ticket System"
+#   description: "{server_description}\n\nPlease select the ticket type that fits your needs:"
+#   footer: "{footer_text}"
+
+# Example 7: Professional branding
+# panel:
+#   title: "🎫 Tech Support System"
+#   footer: "Tech Support • Powered by hiiamken"
+
+# Example 8: Gaming community branding
+# panel:
+#   title: "🎮 Gaming Support"
+#   footer: "Gaming Community • Get Help Here"
+
+# ========================================
+# PLACEHOLDER VARIABLES
+# ========================================
+# Available placeholders for dynamic content:
+# {user} - User mention (e.g., @username)
+# {thread} - Thread mention (e.g., #thread-name)
+# {category} - Category name
+# {emoji} - Category emoji
+# {username} - User's username
+# {tag} - User's full tag (username#discriminator)
+# {roles} - Staff role mentions
+# {time} - Time value (for cooldowns)
+# {max} - Maximum value (for limits)
+# {server} - Server name
+# {brand_emoji} - Brand emoji from config
+# {server_name} - Server name from config
+# {server_description} - Server description from config
+# {footer_text} - Footer text from config
+# {footer_alt} - Alternative footer text from config
+
+# ========================================
+# CUSTOMIZATION NOTES
+# ========================================
+# - All messages support emoji
+# - Use {variable} for dynamic content
+# - Keep messages concise and clear
+# - Test changes before deploying to production
+# - Backup your messages.yml before making changes
+# - Uncomment examples above to use them
+  login_success: "✅ {user} logged in successfully!"
+  running_on_servers: "🎯 Bot is running on {count} server(s)"
+  error_initializing: "❌ Error initializing bot:"
+  token_not_found: "❌ DISCORD_TOKEN not found in .env file"
+  login_error: "❌ Login error:"
+  command_not_found: "Command not found: {command}"
+  error_executing_command: "Error executing command {command}:"
+  error_handling_interaction: "Error handling interaction:"
+  error_sending_error: "Error sending error message:" 
