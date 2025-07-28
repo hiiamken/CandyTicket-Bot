@@ -5,6 +5,47 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-01-28
+
+### 🚀 Enhanced Features & Performance
+
+#### ✨ New Features
+- **📄 Complete Transcript Export** - Beautiful HTML transcripts with full conversation history
+- **📊 Advanced Analytics Dashboard** - Comprehensive analytics with interactive charts
+- **🔔 Notification System** - Webhook-based notifications for ticket events
+- **📈 Performance Analytics** - Response time tracking and staff performance metrics
+- **🎯 Category Analytics** - Detailed breakdown by ticket categories
+- **📅 Time Analysis** - Temporal patterns and peak activity detection
+
+#### 🎨 Enhanced UI/UX
+- **📊 Chart Generation** - Visual charts using Chart.js for better data representation
+- **🎨 Improved Embeds** - More detailed and visually appealing analytics embeds
+- **📱 Responsive Design** - Better mobile and desktop experience
+- **🎯 Detailed Analytics** - Optional detailed breakdowns for power users
+
+#### ⚡ Performance Improvements
+- **🚀 Faster Analytics** - Optimized data collection and processing
+- **📊 Efficient Charts** - Canvas-based chart generation for better performance
+- **🔄 Queue System** - Notification queue to prevent rate limiting
+- **💾 Memory Optimization** - Better memory management for large datasets
+
+#### 🛡️ Enhanced Security
+- **🔒 Rate Limiting** - Improved rate limiting for all interactions
+- **🛡️ Input Validation** - Enhanced validation for all user inputs
+- **🔐 Permission Checks** - More granular permission controls
+
+#### 📋 New Commands
+- **`/analytics`** - Advanced analytics dashboard with multiple view types
+- **Enhanced `/ticketstats`** - Now includes charts and detailed breakdowns
+
+#### 🔧 Technical Improvements
+- **📦 New Dependencies** - Added Chart.js, Canvas, Winston for enhanced functionality
+- **🏗️ Modular Architecture** - Better separation of concerns with new services
+- **📝 Improved Logging** - Winston-based logging system
+- **🔧 Configuration** - Enhanced configuration options for notifications
+
+---
+
 ## [1.0.0] - 2025-01-28
 
 ### 🎉 Initial Release

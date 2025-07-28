@@ -5,7 +5,7 @@
 ![Discord.js](https://img.shields.io/badge/Discord.js-14.14.1-5865F2?style=for-the-badge&logo=discord&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-16.9+-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-1.1.0-blue?style=for-the-badge)
 
 **A powerful, feature-rich Discord ticket system bot built with modern technologies**
 
@@ -52,9 +52,11 @@ CandyTicket Bot is a comprehensive Discord ticket management system designed for
 
 ### Advanced Features
 - **🔄 Auto-Close System** - Intelligent ticket management
-- **📄 Transcript Export** - Complete conversation history
-- **🎯 Staff Management** - Role-based access control
-- **📈 Real-time Stats** - Live ticket analytics
+- **📄 Complete Transcript Export** - Beautiful HTML transcripts with full history
+- **🎯 Staff Management** - Role-based access control with performance tracking
+- **📈 Advanced Analytics** - Comprehensive analytics with interactive charts
+- **🔔 Notification System** - Webhook-based notifications for all events
+- **📊 Performance Metrics** - Response time tracking and staff analytics
 
 ---
 
@@ -176,7 +178,8 @@ database:
 | Command | Description | Permission | Usage |
 |---------|-------------|------------|-------|
 | `/createpanel` | Create ticket panel | Manage Guild | `/createpanel` |
-| `/ticketstats` | View ticket statistics | Manage Guild | `/ticketstats` |
+| `/ticketstats` | View ticket statistics with charts | Manage Guild | `/ticketstats [charts]` |
+| `/analytics` | Advanced analytics dashboard | Manage Guild | `/analytics [type] [detailed]` |
 | `/closealltickets` | Close all open tickets | Manage Guild | `/closealltickets` |
 
 ### Command Examples

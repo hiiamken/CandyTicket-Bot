@@ -103,10 +103,31 @@ async function handleTicketInteraction(interaction) {
 
     // Handle export transcript button
     if (customId === 'ticket_transcript') {
-      await interaction.reply({
-        content: configLoader.getMessage('transcript.under_development', '📄 Transcript export feature is under development!'),
-        ephemeral: true
-      });
+      await interaction.deferReply({ ephemeral: true });
+      
+      try {
+        const TranscriptExporter = require('../utils/transcriptExporter');
+        const exporter = new TranscriptExporter();
+        
+        const attachment = await exporter.createTranscriptAttachment(interaction.channel, interaction.guild);
+        
+        const transcriptEmbed = new EmbedBuilder()
+          .setTitle('📄 Ticket Transcript')
+          .setDescription('Here is the complete transcript of this ticket.')
+          .setColor(`#${configLoader.get('embed_colors.primary', 'FF69B4')}`)
+          .setTimestamp();
+        
+        await interaction.editReply({
+          embeds: [transcriptEmbed],
+          files: [attachment]
+        });
+      } catch (error) {
+        console.error('Error generating transcript:', error);
+        await interaction.editReply({
+          content: configLoader.getMessage('errors.transcript_error', '❌ An error occurred while generating the transcript!'),
+          ephemeral: true
+        });
+      }
       return;
     }
 
